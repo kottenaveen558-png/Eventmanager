@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="card">
+    <h2>Add Event</h2>
+    <form method="post">
+        <label>Event Name</label>
+        <input type="text" name="name" placeholder="Tech Fest 2026" required />
+
+        <label>Date</label>
+        <input type="text" name="date" placeholder="25-05-2026" required />
+
+        <label>Time</label>
+        <input type="text" name="time" placeholder="10:00 AM" required />
+
+        <label>Venue</label>
+        <input type="text" name="venue" placeholder="Seminar Hall" required />
+
+        <label>Organizer</label>
+        <input type="text" name="organizer" placeholder="CSE Department" required />
+
+        <label>Seats</label>
+        <input type="number" name="seats" placeholder="200" min="1" required />
+
+        <button type="submit">Create Event</button>
+    </form>
+</div>
+{% endblock %}

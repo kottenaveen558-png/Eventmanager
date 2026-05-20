@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="card">
+    <h2>Edit Event</h2>
+    <form method="post">
+        <label>Event Name</label>
+        <input type="text" name="name" value="{{ event.name }}" required />
+
+        <label>Date</label>
+        <input type="text" name="date" value="{{ event.date }}" required />
+
+        <label>Time</label>
+        <input type="text" name="time" value="{{ event.time }}" required />
+
+        <label>Venue</label>
+        <input type="text" name="venue" value="{{ event.venue }}" required />
+
+        <label>Organizer</label>
+        <input type="text" name="organizer" value="{{ event.organizer }}" required />
+
+        <label>Seats</label>
+        <input type="number" name="seats" value="{{ event.seats }}" min="1" required />
+
+        <button type="submit">Save Changes</button>
+    </form>
+</div>
+{% endblock %}

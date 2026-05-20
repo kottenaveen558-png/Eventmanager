@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Manager</title>
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body class="{{ body_class|default('') }}">
+    <header>
+        <div class="brand">
+            <a href="{{ url_for('home') }}">Event Manager</a>
+        </div>
+        <nav>
+            <a href="{{ url_for('home') }}">Events</a>
+            <a href="{{ url_for('admin_login') }}">Admin</a>
+            {% if session.get('admin_logged_in') %}
+                <a href="{{ url_for('admin_dashboard') }}">Dashboard</a>
+                <a href="{{ url_for('admin_logout') }}">Logout</a>
+            {% endif %}
+        </nav>
+    </header>
+
+    <main>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-container">
+                {% for category, message in messages %}
+                    <div class="flash {{ category }}">{{ message }}</div>
+                {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>Event Manager App &copy; 2026</p>
+    </footer>
+</body>
+</html>

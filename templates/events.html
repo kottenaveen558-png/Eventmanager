@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h2>Available Events</h2>
+<div class="events-grid">
+    {% for event in events %}
+    <div class="event-card">
+        <h3>{{ event.name }}</h3>
+        <p><strong>Date:</strong> {{ event.date }}</p>
+        <p><strong>Time:</strong> {{ event.time }}</p>
+        <p><strong>Venue:</strong> {{ event.venue }}</p>
+        <p><strong>Organizer:</strong> {{ event.organizer }}</p>
+        <p><strong>Seats Left:</strong> {{ event.remaining_seats() }}</p>
+        {% if event.remaining_seats() > 0 %}
+            <a class="button" href="{{ url_for('register', event_id=event.id) }}">Register</a>
+        {% else %}
+            <span class="full-label">Full</span>
+        {% endif %}
+    </div>
+    {% else %}
+    <p>No scheduled events yet. Please check back later.</p>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h2>Registered Students</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Student Name</th>
+            <th>Roll Number</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Event</th>
+            <th>Registered At</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for reg in registrations %}
+        <tr>
+            <td>{{ reg.student.name }}</td>
+            <td>{{ reg.student.roll_number }}</td>
+            <td>{{ reg.student.email }}</td>
+            <td>{{ reg.student.phone }}</td>
+            <td>{{ reg.event.name }}</td>
+            <td>{{ reg.registered_at }}</td>
+        </tr>
+        {% else %}
+        <tr><td colspan="6">No registrations yet.</td></tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
