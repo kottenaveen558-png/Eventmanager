@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="card">
+    <h2>Pending Admin Requests</h2>
+    {% if requests %}
+    <table>
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Requested At</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for req in requests %}
+            <tr>
+                <td>{{ req.username }}</td>
+                <td>{{ req.email }}</td>
+                <td>{{ req.phone }}</td>
+                <td>{{ req.requested_at }}</td>
+                <td class="actions">
+                    <a href="{{ url_for('approve_admin_request', request_id=req.id) }}">Approve</a>
+                    <a class="danger" href="{{ url_for('reject_admin_request', request_id=req.id) }}">Reject</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p>No pending admin requests.</p>
+    {% endif %}
+</div>
+{% endblock %}

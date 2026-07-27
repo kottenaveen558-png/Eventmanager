@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="login-container">
+
+    <div class="login-card">
+
+        <div class="login-icon">
+            👑
+        </div>
+
+        <h2>Super Admin Login</h2>
+
+        <p class="login-subtitle">
+            Only the College Head can access this portal.
+        </p>
+
+        <form method="POST">
+
+            <label>Username</label>
+            <input type="text"
+                   name="username"
+                   placeholder="Enter Username"
+                   required>
+
+            <label>Password</label>
+            <input type="password"
+                   name="password"
+                   placeholder="Enter Password"
+                   required>
+
+            <button type="submit">
+                Login as Super Admin
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+{% endblock %}

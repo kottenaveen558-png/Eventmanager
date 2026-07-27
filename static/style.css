@@ -185,6 +185,22 @@ button:hover,
     opacity: 0.95;
 }
 
+.auth-card {
+    max-width: 460px;
+    margin: 40px auto;
+}
+
+.auth-link {
+    margin-top: 16px;
+    text-align: center;
+}
+
+.auth-link a {
+    color: #2563eb;
+    font-weight: 600;
+    text-decoration: none;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -267,4 +283,255 @@ footer {
     .events-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+}
+
+
+/* ---------- Super Admin Login ---------- */
+
+.login-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:85vh;
+}
+
+.login-card{
+
+    width:420px;
+
+    background:#ffffff;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.12);
+
+    text-align:center;
+}
+
+.login-icon{
+
+    font-size:60px;
+
+    margin-bottom:15px;
+}
+
+.login-card h2{
+
+    margin-bottom:8px;
+
+    color:#1e293b;
+}
+
+.login-subtitle{
+
+    color:#64748b;
+
+    margin-bottom:30px;
+}
+
+.login-card label{
+
+    display:block;
+
+    text-align:left;
+
+    margin-top:18px;
+
+    margin-bottom:8px;
+
+    font-weight:600;
+}
+
+.login-card input{
+
+    width:100%;
+
+    padding:14px;
+
+    border:1px solid #d1d5db;
+
+    border-radius:10px;
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:.3s;
+}
+
+.login-card input:focus{
+
+    border-color:#2563eb;
+
+    box-shadow:0 0 10px rgba(37,99,235,.2);
+}
+
+.login-card button{
+
+    width:100%;
+
+    margin-top:30px;
+
+    padding:14px;
+
+    background:#1d4ed8;
+
+    color:white;
+
+    border:none;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.login-card button:hover{
+
+    background:#1e40af;
+}
+
+
+/* ===========================
+   ADMIN PORTAL
+=========================== */
+
+.portal-container{
+
+    min-height:85vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:linear-gradient(135deg,#eef5ff,#ffffff);
+
+}
+
+.portal-title{
+
+    font-size:42px;
+
+    color:#1e3a8a;
+
+    margin-bottom:10px;
+
+    font-weight:bold;
+}
+
+.portal-subtitle{
+
+    color:#64748b;
+
+    font-size:18px;
+
+    margin-bottom:45px;
+}
+
+.portal-cards{
+
+    display:flex;
+
+    gap:50px;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+}
+
+.portal-card{
+
+    width:330px;
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:35px;
+
+    text-align:center;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+    transition:.35s;
+}
+
+.portal-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.18);
+}
+
+.portal-icon{
+
+    font-size:65px;
+
+    margin-bottom:20px;
+}
+
+.portal-card h2{
+
+    color:#1e293b;
+
+    margin-bottom:10px;
+}
+
+.portal-card p{
+
+    color:#64748b;
+
+    margin-bottom:30px;
+}
+
+.portal-btn{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:10px;
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.super-btn{
+
+    background:#dc2626;
+}
+
+.super-btn:hover{
+
+    background:#b91c1c;
+}
+
+.admin-btn{
+
+    background:#2563eb;
+}
+
+.admin-btn:hover{
+
+    background:#1d4ed8;
 }

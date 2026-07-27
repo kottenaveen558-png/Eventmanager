@@ -1,0 +1,65 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div class="portal-container">
+
+    <h1 class="portal-title">
+        University Administration Portal
+    </h1>
+
+    <p class="portal-subtitle">
+        Select your role to continue
+    </p>
+
+    <div class="portal-cards">
+
+        <!-- Super Admin -->
+
+        <div class="portal-card super-card">
+
+            <div class="portal-icon">
+                👑
+            </div>
+
+            <h2>Super Admin</h2>
+
+            <p>
+                College Head / Principal
+            </p>
+
+            <a href="{{ url_for('superadmin_login') }}">
+                <button class="portal-btn super-btn">
+                    Login
+                </button>
+            </a>
+
+        </div>
+
+        <!-- Admin -->
+
+        <div class="portal-card admin-card">
+
+            <div class="portal-icon">
+                👨‍💼
+            </div>
+
+            <h2>Admin</h2>
+
+            <p>
+                Approved Staff Members
+            </p>
+
+            <a href="{{ url_for('admin_login') }}">
+                <button class="portal-btn admin-btn">
+                    Login
+                </button>
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
