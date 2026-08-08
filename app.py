@@ -4,12 +4,27 @@ from sqlalchemy import text
 from datetime import datetime
 from werkzeug.security import generate_password_hash, check_password_hash
 import os
+from dotenv import load_dotenv
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+
+load_dotenv()
 
 app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = \
-    "mysql+pymysql://root:912153@localhost:3306/student_manager"
+
+app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL")
+print("DATABASE URL HOST:", os.getenv("DATABASE_URL", "").split("@")[-1])
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.config["SECRET_KEY"] = os.getenv("SECRET_KEY", "replace-with-a-secure-key")
+
+# TiDB Cloud SSL configuration
+app.config["SQLALCHEMY_ENGINE_OPTIONS"] = {
+    "connect_args": {
+        "ssl_verify_cert": True,
+        "ssl_verify_identity": True,
+        "ssl_ca": os.path.join(app.root_path, "ca.pem")
+    }
+}
 
 db = SQLAlchemy(app)
 
