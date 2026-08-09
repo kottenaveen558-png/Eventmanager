@@ -6,3 +6,4 @@ gunicorn==23.0.0
 Flask-WTF
 email-validator
 python-dotenv
+python-dotenv==1.0.1
