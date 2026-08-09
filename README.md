@@ -4,7 +4,7 @@ A full-stack **University Event Management Web Application** built using **Pytho
 
 The application allows students to discover and register for university events, while administrators can create, edit, delete, and manage events and registrations.
 
-🌐 **Live Demo:** [https://eventmanager-ygli.onrender.com](https://eventmanager-ygli.onrender.com)
+🌐 **Live Demo:** [Open Live Website](https://eventmanager-ygli.onrender.com)
 
 ---
 
@@ -63,19 +63,19 @@ The application uses a relational database hosted on **TiDB Cloud**.
 
 ## 🛠️ Technology Stack
 
-| Technology       | Purpose                          |
-| ---------------- | -------------------------------- |
-| Python           | Backend programming              |
-| Flask            | Web framework                    |
-| Flask-SQLAlchemy | Database integration             |
-| SQLAlchemy       | Object-relational mapping        |
-| PyMySQL          | MySQL-compatible database driver |
-| TiDB Cloud       | Production database              |
-| HTML             | Frontend structure               |
-| CSS              | Styling                          |
-| JavaScript       | Client-side functionality        |
-| Git & GitHub     | Version control                  |
-| Render           | Cloud deployment                 |
+| Technology | Purpose |
+|---|---|
+| Python | Backend programming |
+| Flask | Web framework |
+| Flask-SQLAlchemy | Database integration |
+| SQLAlchemy | Object-relational mapping |
+| PyMySQL | MySQL-compatible database driver |
+| TiDB Cloud | Production database |
+| HTML | Frontend structure |
+| CSS | Styling |
+| JavaScript | Client-side functionality |
+| Git & GitHub | Version control |
+| Render | Cloud deployment |
 
 ---
 
@@ -114,13 +114,13 @@ The application uses a relational database hosted on **TiDB Cloud**.
 
 ## 📅 Available Events
 
-![Available Events](screenshots/available-events.png)
+![Available Events](screenshots/student-portal.png)
 
 ---
 
 ## 👨‍💼 University Administration Portal
 
-![University Administration Portal](screenshots/admin-portal.png)
+![University Administration Portal](screenshots/admin-dashboard.png)
 
 ---
 
@@ -144,9 +144,11 @@ The application uses a relational database hosted on **TiDB Cloud**.
 
 ## ☁️ Deployment
 
+![Render Deployment](screenshots/render-deployment.png)
+
 The application is deployed and available online through Render.
 
-🌐 **Live Application:** [https://eventmanager-ygli.onrender.com](https://eventmanager-ygli.onrender.com)
+🌐 **Live Application:** [Open Live Website](https://eventmanager-ygli.onrender.com)
 
 ---
 
@@ -194,11 +196,23 @@ SECRET_KEY=your_secret_key
 python app.py
 ```
 
-Open:
+Open the application at:
 
 ```text
 http://127.0.0.1:5000
 ```
+
+---
+
+## ☁️ Deployment
+
+The application is deployed using:
+
+- **Render** — Flask web application hosting
+- **TiDB Cloud** — Production database
+- **GitHub** — Source code and version control
+
+The production database connection uses environment variables and SSL configuration.
 
 ---
 
@@ -231,11 +245,12 @@ EventManager/
 │
 └── screenshots/
     ├── home.png
-    ├── available-events.png
-    ├── admin-portal.png
+    ├── student-portal.png
+    ├── admin-dashboard.png
     ├── admin-login.png
     ├── create-event.png
-    └── registration.png
+    ├── registration.png
+    └── render-deployment.png
 ```
 
 ---
@@ -253,9 +268,10 @@ EventManager/
 
 ## 🔗 Project Links
 
-🌐 **Live Demo:** [https://eventmanager-ygli.onrender.com](https://eventmanager-ygli.onrender.com)
+🌐 **Live Demo:** [Open Live Website](https://eventmanager-ygli.onrender.com)
 
 💻 **GitHub Repository:** [View Source Code](https://github.com/kottenaveen558-png/Eventmanager)
+
 ---
 
 ## 👨‍💻 Author
